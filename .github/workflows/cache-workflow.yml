@@ -16,4 +16,4 @@ jobs:
             .venv
           key: cache-d63003d
       - name: Show cache result
-        run: echo "Cache result: ${{ steps.cache_step.outputs.cache-hit }}"
+        run: echo "Cache result:${{ steps.cache_step.outputs.cache-hit }}"
