@@ -1,6 +1,9 @@
+
 name: Cache Example
+
 on:
   workflow_dispatch:
+
 jobs:
   cache-demo:
     runs-on: ubuntu-latest
@@ -17,15 +20,5 @@ jobs:
           key: cache-d63003d
       - name: Show cache result
         run: echo "Cache result:${{ steps.cache_step.outputs.cache-hit }}"
-        name: Test Action
-
-on:
-  workflow_dispatch:
-
-jobs:
-  test_job:
-    runs-on: ubuntu-latest
-    steps:
       - name: 25ds3000144@ds.study.iitm.ac.in
         run: echo "This is a step with my email address."
-
