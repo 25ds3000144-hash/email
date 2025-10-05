@@ -11,6 +11,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+name: Cache Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cache-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: prime-cache-d63003d
         id: cache_step
         uses: actions/cache@v4
