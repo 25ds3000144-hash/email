@@ -1,16 +1,12 @@
 name: Cache Example
-
 on:
   workflow_dispatch:
-
 jobs:
   cache-demo:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: prime-cache-d63003d
         id: cache_step
         uses: actions/cache@v4
@@ -19,6 +15,5 @@ jobs:
             ~/.cache/pip
             .venv
           key: cache-d63003d
-
       - name: Show cache result
         run: echo "Cache result: ${{ steps.cache_step.outputs.cache-hit }}"
