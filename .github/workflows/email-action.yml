@@ -1,0 +1,12 @@
+name: Portfolio Check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 25ds3000144@ds.study.iitm.ac.in
+        run: echo "Hello, this step proves my identity by email!"
+
